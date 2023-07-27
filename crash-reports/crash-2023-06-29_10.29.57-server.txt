@@ -1,0 +1,74 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 2023-06-29 10:29:57
+Description: Exception in server tick loop
+
+java.net.UnknownHostException: Host desconocido (lauragay)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1048)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1638)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:997)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1628)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1494)
+	at java.base/java.net.InetAddress.getByName(InetAddress.java:1389)
+	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:192)
+	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:952)
+	at net.minecraft.server.MinecraftServer.lambda$0(MinecraftServer.java:296)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 18, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1622594560 bytes (1547 MiB) / 2147483648 bytes (2048 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 16
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 5
+	Microarchitecture: unknown
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA Quadro P620
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 2048.00
+	Graphics card #0 deviceId: 0x1cb6
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.3625
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Virtual memory max (MB): 22716.73
+	Virtual memory used (MB): 15313.95
+	Swap memory total (MB): 6400.00
+	Swap memory used (MB): 118.24
+	JVM Flags: 2 total; -Xmx2048M -Xms2048M
+	CraftBukkit Information: 
+   Running: 
+   Failed to handle CraftCrashReport:
+java.lang.NullPointerException: Cannot invoke "org.bukkit.Server.getName()" because "org.bukkit.Bukkit.server" is null
+	at org.bukkit.Bukkit.getName(Bukkit.java:103)
+	at org.bukkit.craftbukkit.v1_20_R1.CraftCrashReport.get(CraftCrashReport.java:23)
+	at org.bukkit.craftbukkit.v1_20_R1.CraftCrashReport.get(CraftCrashReport.java:1)
+	at net.minecraft.SystemReport.a(SourceFile:66)
+	at net.minecraft.CrashReport.<init>(CrashReport.java:37)
+	at net.minecraft.server.MinecraftServer.a(MinecraftServer.java:1048)
+	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:993)
+	at net.minecraft.server.MinecraftServer.lambda$0(MinecraftServer.java:296)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+	Server Running: true
+	Data Packs: vanilla, file/bukkit
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Is Modded: ERR
+	Type: Dedicated Server (map_server.txt)
